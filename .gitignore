@@ -1,0 +1,13 @@
+
+# macOS system files
+.DS_Store
+
+# Temporary Microsoft Excel files
+~$*.xlsx
+
+# VS Code local settings
+.vscode/
+
+# Python cache files (if you use Python later)
+__pycache__/
+*.pyc
