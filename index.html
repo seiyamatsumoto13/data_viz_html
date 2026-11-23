@@ -1,16 +1,309 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Lab</title>
-    <style>
-      /* Part 2 CSS should all be within this tag. */
-    </style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Gallery "Eras of Capitalism"</title>
+        <style>
+            body {
+                background-color: #e8e8e8cd;
+                font-family: system-ui, Helvetica, Arial, sans-serif;
+                color: #333333;
+            }
+            h1 {
+                color: #333333;
+                font-size: 32px;
+                text-align: center;
+            }
 
-<!-- Part 1 Content should all be within the body -->
+            .page-layout {
+                display: grid;
+                grid-template-columns: 180px minmax(0, 1fr);
+                gap: 20px;
+            }
+            nav {
+                position: sticky;
+                top: 20px;
+                align-self: start;
+                border-right: 1px solid #aaaaaa;
+                padding-right: 10px;
+            }
+            nav ul {
+                list-style-type: none;
+                padding-left: 20px;
+            }
+            nav li {
+                margin-bottom: 12px;
+            }
+            nav li a {
+                color: #333333;
+                text-decoration: none;
+                font-size: 15px;
+            }
+            main {
+                min-width: 0;
+            }
+            h2:not(:first-of-type) {
+                border-top: 2px solid #aaaaaa;
+                padding-top: 20px;
+            }
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 20px;
+                margin: 20px auto;
+                max-width: 900px;
+            }
+            .gallery-item {
+                background-color: #fdfdfdcd;
+                padding: 20px;
+                margin: 20px auto;
+                max-width: 400px;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .gallery-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto 15px;
+            }
+            .gallery-item a {
+                font-size: 16px;
+                color: #333333;
+                font-weight: bold;
+            }
+            .caption {
+                width: 80%;
+                font-size: 14px;
+                color: #333333;
+                line-height: 1.2;
+                text-align: center;
+                margin: 8px auto 0;            }
+        </style>
+    </head>
 
-</body>
+    <body>
+
+        <header>
+            <h1>Image Gallery "Eras of Capitalism"</h1>
+        </header>
+
+        <div class="page-layout">
+
+            <nav class="crumbs">
+                <ul>
+                    <li class="crumb"><a href="#early">Early Era</a></li>
+                    <li class="crumb"><a href="#late">Current Era</a></li>
+                    <li class="crumb"><a href="#coming">Coming Era</a></li>
+                </ul>
+            </nav>
+
+            <main>
+
+                <h2 id="early">Early Era</h2>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+
+                        <img src="images/img1_1.jpg"
+                            alt="Black-and-white illustration of a rising sun with rays labeled “Municipal Ownership,” “Government Ownership,” “Public Control,” and “Equal Rights”; a man raises both arms in the foreground.">
+
+                        <a href="https://pdimagearchive.org/images/ac9c2b11-23c1-486a-9d33-6912e97b0b5e/">
+                            The Dawn of a New Era
+                        </a>
+
+                        <p class="caption">
+                            Published in Capital and Labor (1907), this illustration presents public ownership, public control, and equal rights as signs of a new era.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img1_2.jpg"
+                            alt="Black-and-white political illustration titled Level of Competition, depicting competition as a struggle in society.">
+
+                        <a href="https://pdimagearchive.org/images/181f2397-d352-4b22-a53e-ce55d5fbd373/">
+                            Level of Competition
+                        </a>
+
+                        <p class="caption">
+                            In Capital and Labor (1907), Paul Krafft criticizes the pressures of economic competition. The illustration reflects the period's debate over whether rivalry or cooperation better serves workers.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img1_3.jpg"
+                            alt="Black-and-white cartoon of a wealthy man directing other people as they count large piles of money.">
+
+                        <a href="https://pdimagearchive.org/images/41aa59b0-a17a-48f1-8f52-9e1e94aa4e85/">
+                            Mountain of Money
+                        </a>
+
+                        <p class="caption">
+                            In this 1907 satire, a wealthy man has others count his enormous piles of money. The scene contrasts concentrated riches with the limited earnings of workers.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img1_4.jpg"
+                            alt="Black-and-white illustration with a small Before scene of workers bearing a heavy load and a larger After scene showing people beside a building labeled Public Buildings.">
+
+                        <a href="https://pdimagearchive.org/images/53d5f020-ed3e-45b9-b012-1a8969306f6e/">
+                            Before and After
+                        </a>
+
+                        <p class="caption">
+                            This 1907 cartoon contrasts workers carrying heavy burdens with a vision of shared responsibility through cooperation. It reflects the author's argument for a fairer economic system.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img1_5.jpg"
+                            alt="Black-and-white political cartoon of a large alligator-like monster swallowing a map of the United States.">
+
+                        <a href="https://pdimagearchive.org/images/39004a54-d8b4-481e-832e-9015723ad7c6/">
+                            The Monster of Monopoly
+                        </a>
+
+                        <p class="caption">
+                            Paul Krafft depicts monopoly as a dangerous creature consuming the nation. The 1907 cartoon criticizes the growing power of concentrated businesses.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img1_6.jpg"
+                            alt="Black-and-white political illustration of an octopus representing graft, with its tentacles spread outward.">
+
+                        <a href="https://pdimagearchive.org/images/c1a57e6d-b7f9-4ef5-bc18-2fe61c2b306c/">
+                            The Octopus of Graft
+                        </a>
+
+                        <p class="caption">
+                            In this 1907 cartoon, the octopus symbolizes graft and the reach of political corruption. Its tentacles suggest how corruption can extend across public life.
+                        </p>
+
+                    </div>
+                </div>
+
+                <h2 id="late">Current Era</h2>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+
+                        <img src="images/img2_1.jpg"
+                            alt="Nighttime cityscape with illuminated buildings and a skyline of tall urban structures.">
+
+                        <a href="https://unsplash.com/photos/cityscape-with-illuminated-buildings-at-night-4ZET5UFzYjs">
+                            Cityscape with illuminated buildings at night
+                        </a>
+
+                        <p class="caption">
+                            An illuminated city skyline represents the scale and energy of modern urban economies. The nighttime scene contrasts with the historical cartoons in the first gallery.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img2_2.jpg"
+                            alt="Photograph of a tall urban tower with a clock near its top.">
+
+                        <a href="https://unsplash.com/photos/a-tall-tower-with-a-clock-on-the-top-of-it-PsToQ8md5KY">
+                            A Tall Tower with a Clock
+                        </a>
+
+                        <p class="caption">
+                            A clock tower rises above the surrounding cityscape, showing the contrast between traditional landmarks and modern urban development.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img2_3.jpg"
+                            alt="Close-up photograph of a Zimbabwean banknote marked One Billion Dollars.">
+
+                        <a href="https://unsplash.com/photos/a-one-billion-dollar-bill-with-the-words-one-billion-dollars-printed-on-it-Mk1RW1AfxAw">
+                            A One Billion Dollar Bill
+                        </a>
+
+                        <p class="caption">
+                            A one-billion-dollar banknote from Zimbabwe illustrates how extreme inflation can produce unusually large currency denominations. Its face value is not evidence of equivalent purchasing power.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img2_4.jpg"
+                            alt="U.S. dollar bills being inserted into a piggy bank.">
+
+                        <a href="https://unsplash.com/photos/us-dollar-bills-being-inserted-into-a-piggy-bank-dvkgCLkN9kY">
+                            U.S. Dollar Bills Being Inserted into a Piggy Bank
+                        </a>
+
+                        <p class="caption">
+                            U.S. dollar bills being deposited into a piggy bank illustrate saving and personal financial planning in a modern economy.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img2_5.jpg"
+                            alt="Black-and-white photograph of a person carrying shopping bags walking past another person seated on a sidewalk.">
+
+                        <a href="https://unsplash.com/photos/grayscale-photo-of-man-with-shop-bags-walking-past-beggar-siting-on-sidewalk-Skhc2Bm7J4s">
+                            Shopping and Economic Hardship
+                        </a>
+
+                        <p class="caption">
+                            A black-and-white street photograph contrasts shopping and visible economic hardship. The scene invites viewers to consider inequality in a consumer economy.
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img2_6.jpg"
+                            alt="Close-up photograph of red-and-white playing cards.">
+
+                        <a href="https://unsplash.com/photos/red-and-white-playing-cards-JhVLCDT9jXE">
+                            Red and White Playing Cards
+                        </a>
+
+                        <p class="caption">
+                            Red-and-white playing cards offer a visual metaphor for chance, competition, and unequal economic outcomes.
+                        </p>
+
+                    </div>
+                </div>
+
+                <h2 id="coming">Coming Era</h2>
+
+                    <div class="gallery-item">
+
+                        <img src="images/img3.png"
+                            alt="Illustration of a balance scale comparing fruit and meat in a future marketplace.">
+
+                        <strong>Fruit, Meat</strong>
+
+                        <p class="caption">
+                            Value can be exchanged only for real value.
+                        </p>
+
+                    </div>
+            </main>
+        </div>
+    </body>
 </html>
